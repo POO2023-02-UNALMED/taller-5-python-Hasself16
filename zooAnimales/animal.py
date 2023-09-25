@@ -102,4 +102,4 @@ class Animal():
         from zooAnimales.mamifero import Mamifero
         from zooAnimales.pez import Pez
         from zooAnimales.reptil import Reptil
-        return f"Mamiferos: {Mamifero.totalMamiferos}\nAves: {Ave.totalAves}\nReptiles: {Reptil.totalReptiles}\nPeces: {Pez.totalPeces}\nAnfibios: {Anfibio.totalAnfibios}"
+        return f"Mamiferos: {Mamifero.cantidadMamiferos}\nAves: {Ave.cantidadAves}\nReptiles: {Reptil.cantidadReptiles}\nPeces: {Pez.cantidadPeces}\nAnfibios: {Anfibio.cantidadAnfibios}"
