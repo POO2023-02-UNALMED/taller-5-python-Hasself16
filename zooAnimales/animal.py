@@ -35,7 +35,7 @@ class Animal():
     def agregarZona(self, zona):
         self._zona.append(zona)
 
-    def __str__(self):
+    def toString(self):
         if len(self._zona)<1:
             print(
                 "Mi nombre es "
@@ -96,7 +96,7 @@ class Animal():
     def movimiento(self):
         return "desplazarse"
     
-    def totalPorTIpo():
+    def totalPorTipo():
         from zooAnimales.anfibio import Anfibio
         from zooAnimales.ave import Ave
         from zooAnimales.mamifero import Mamifero
