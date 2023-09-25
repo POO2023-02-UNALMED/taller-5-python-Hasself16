@@ -1,6 +1,8 @@
 from zooAnimales.animal import Animal
+
+
 class Mamifero(Animal):
-    listado = []
+    _listado = []
     caballos = 0
     leones = 0
 
@@ -8,7 +10,7 @@ class Mamifero(Animal):
         super().__init__(nombre, edad, habitat, genero)
         self.pelaje = pelaje
         self.patas = patas
-        Mamifero.listado.append(self)
+        Mamifero._listado.append(self)
 
     def setPelaje(self, pelaje):
         self.pelaje = pelaje
@@ -24,7 +26,7 @@ class Mamifero(Animal):
 
     @staticmethod
     def cantidadMamiferos():
-        return len(Mamifero.listado)
+        return len(Mamifero._listado)
 
     @staticmethod
     def crearCaballo(nombre, edad, genero):

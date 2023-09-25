@@ -1,6 +1,5 @@
 from zooAnimales.animal import Animal
 
-
 class Anfibio(Animal):
     _listado = []
     ranas = 0
@@ -10,7 +9,7 @@ class Anfibio(Animal):
         super().__init__(nombre, edad, habitat, genero)
         self._colorPiel = colorPiel
         self._venenoso = venenoso
-        Anfibio.listado.append(self)
+        Anfibio._listado.append(self)
 
     def setColorPiel(self, colorPiel):
         self._colorPiel = colorPiel

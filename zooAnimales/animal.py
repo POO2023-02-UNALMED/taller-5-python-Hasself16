@@ -1,9 +1,3 @@
-from zooAnimales.mamifero import Mamifero
-from zooAnimales.ave import Ave
-from zooAnimales.pez import Pez
-from zooAnimales.reptil import Reptil
-from zooAnimales.anfibio import Anfibio
-
 class Animal():
     totalAnimales=0
     def __init__(self, nombre, edad, habitat, genero):
@@ -41,27 +35,8 @@ class Animal():
     def agregarZona(self, zona):
         self._zona.append(zona)
 
-    @staticmethod
-    def totalPorTipo():
-        return (
-            "Mamiferos: "
-            + str(Mamifero.cantidadMamiferos())
-            + "\n"
-            + "Aves: "
-            + str(Ave.cantidadAves())
-            + "\n"
-            + "Reptiles: "
-            + str(Reptil.cantidadReptiles())
-            + "\n"
-            + "Peces: "
-            + str(Pez.cantidadPeces())
-            + "\n"
-            + "Anfibios: "
-            + str(Anfibio.cantidadAnfibios())
-        )
-
     def __str__(self):
-        if not self.zona:
+        if len(self._zona)<1:
             print(
                 "Mi nombre es "
                 + self.getNombre()
@@ -120,3 +95,11 @@ class Animal():
 
     def movimiento(self):
         return "desplazarse"
+    
+    def totalPorTIpo():
+        from zooAnimales.anfibio import Anfibio
+        from zooAnimales.ave import Ave
+        from zooAnimales.mamifero import Mamifero
+        from zooAnimales.pez import Pez
+        from zooAnimales.reptil import Reptil
+        return f"Mamiferos: {Mamifero.totalMamiferos}\nAves: {Ave.totalAves}\nReptiles: {Reptil.totalReptiles}\nPeces: {Pez.totalPeces}\nAnfibios: {Anfibio.totalAnfibios}"
